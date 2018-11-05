@@ -26,7 +26,7 @@ into a postgres database. The second part is a j2ee application that show result
   
     `psql < ddl.sql`
   
-  2. configure the script variables. Edit the **scriptconfig.txt** file. Assign to variable the right value
+  3. configure the script variables. Edit the **scriptconfig.txt** file. Assign to variable the right value
      * **APIURL**: the url of github graphql api usually https://api.github.com/graphql
      * **TESTRUNNER_DIR**: where soap ui bin directory is, i.e. /..../SmartBear/SoapUI-5.4.0/bin/
      * **AUTHORIZATIONBEARER**: the auth code for the graphql service. You can got one following
@@ -37,7 +37,7 @@ into a postgres database. The second part is a j2ee application that show result
      
      **WARNING: don't commit this data to a public repository**
      
-  3. the main file is the **script.sh**. You can run it
+  4. the main file is the **script.sh**. You can run it
      manually when you want or you can add it to crontab. The script requires a parameter: the
      config file. For example you can run the follow line from the shell:
      
