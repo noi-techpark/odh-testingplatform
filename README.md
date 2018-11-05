@@ -33,7 +33,7 @@ into a postgres database. The second part is a j2ee application that show result
      
   3. the main file is the **script.sh**. You can run it
      manually when you want or you can add it to crontab. The script requires a parameter: the
-     config file. For example you can add run the follow line from the shell:
+     config file. For example you can run the follow line from the shell:
      
      ```
      /..../script.sh ./scriptconfig.txt
@@ -41,5 +41,26 @@ into a postgres database. The second part is a j2ee application that show result
 
 ## Installing the web app
 
-
 ### Prerequisites
+
+  1. postgres database somewhere
+  2. java / tomcat
+  3. maven
+  
+### Procedure
+     
+  1. create the database tables under the public schema with the following command (add to psql the 
+     required parameters to connect to the database like host, user, database):
+  
+    `psql < ddl.sql`
+  
+  2. edit the web.xml file and change the jdbc_url context param to point to the right database. You can
+     add server/user/password as well
+     
+  3. with maven create the war with the standard target: package
+  
+  4. copy/deploy the war to the tomcat webapps
+  
+  5. open the url http://servername:8080/web
+  
+  
