@@ -20,6 +20,12 @@ into a postgres database. The second part is a j2ee application that show result
 ### Procedure
      
   1. clone or unzip the repository where you like.
+  
+  2. create the database tables under the public schema with the following command (add to psql the 
+     required parameters to connect to the database like host, user, database):
+  
+    `psql < ddl.sql`
+  
   2. configure the script variables. Edit the **scriptconfig.txt** file. Assign to variable the right value
      * **APIURL**: the url of github graphql api usually https://api.github.com/graphql
      * **TESTRUNNER_DIR**: where soap ui bin directory is, i.e. /..../SmartBear/SoapUI-5.4.0/bin/
@@ -49,18 +55,13 @@ into a postgres database. The second part is a j2ee application that show result
   
 ### Procedure
      
-  1. create the database tables under the public schema with the following command (add to psql the 
-     required parameters to connect to the database like host, user, database):
-  
-    `psql < ddl.sql`
-  
-  2. edit the web.xml file and change the jdbc_url context param to point to the right database. You can
+  1. edit the web.xml file and change the jdbc_url context param to point to the right database. You can
      add server/user/password as well
      
-  3. with maven create the war with the standard target: package
+  2. with maven create the war with the standard target: package
   
-  4. copy/deploy the war to the tomcat webapps
+  3. copy/deploy the war to the tomcat webapps
   
-  5. open the url http://servername:8080/web
+  4. open the url http://servername:8080/web
   
   
