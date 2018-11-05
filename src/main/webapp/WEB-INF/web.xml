@@ -8,7 +8,7 @@
 	
 	<context-param>
 	   <param-name>jdbc_url</param-name>
-	   <param-value>jdbc:postgresql://localhost:54321/postgres?user=postgres</param-value>
+	   <param-value>jdbc:postgresql://localhost:5432/postgres?user=postgres</param-value>
 	</context-param>
 
 	<servlet>
