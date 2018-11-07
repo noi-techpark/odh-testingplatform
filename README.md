@@ -62,6 +62,66 @@ into a postgres database. The second part is a j2ee application that show result
   
   3. copy/deploy the war to the tomcat webapps
   
-  4. open the url http://servername:8080/web
+  4. open the url http://servername:8080/testingplatform
   
-  
+## Docker environment
+
+For the project a Docker environment is already prepared and ready to use with all necessary prerequisites.
+
+These Docker containers are the same as used by the continuous integration servers.
+
+### Installation
+
+Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine.
+
+### Start and stop the containers
+
+Before start working you have to start the Docker containers:
+
+```
+docker-compose up --build --detach
+```
+
+After finished working you can stop the Docker containers:
+
+```
+docker-compose stop
+```
+
+### Running commands inside the container
+
+When the containers are running, you can execute any command inside the environment. Just replace the dots `...` in the following example with the command you wish to execute:
+
+```bash
+docker-compose exec java /bin/bash -c "..."
+```
+
+Some examples are:
+
+```bash
+docker-compose exec java /bin/bash -c "mvn clean install"
+
+# or
+
+docker-compose exec java /bin/bash -c "mvn clean test"
+```
+
+To apply the database schema to the database run:
+
+```bash
+docker-compose exec script /bin/bash -c "PGPASSWORD=postgres psql --host=postgres --username=postgres < ddl.sql"
+```
+
+To execute the script run:
+
+```bash
+docker-compose exec script /bin/bash -c "./script.sh scriptconfig.txt"
+```
+
+To build the web app that is accessible under the url http://localhost:8080/testingplatform run:
+
+```bash
+docker-compose exec java /bin/bash -c "mvn clean package"
+
+docker-compose exec tomcat /bin/bash -c "cp /code/target/testingplatform.war /usr/local/tomcat/webapps/testingplatform.war"
+```

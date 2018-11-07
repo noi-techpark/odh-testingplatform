@@ -28,6 +28,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>web</finalName>
+		<finalName>testingplatform</finalName>
 	</build>
 </project>
