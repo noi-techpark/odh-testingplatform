@@ -1,5 +1,5 @@
 APIURL=https://api.github.com/graphql
-TESTRUNNER_DIR='/var/soapui/SoapUI-5.4.0/bin/'
+TESTRUNNER_DIR='/var/soapui/SoapUI/bin/'
 AUTHORIZATIONBEARER=
 USERLOGIN=gituser
 REPOSITORYSIZE=100

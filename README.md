@@ -108,13 +108,13 @@ docker-compose exec java /bin/bash -c "mvn clean test"
 To apply the database schema to the database run:
 
 ```bash
-docker-compose exec script /bin/bash -c "PGPASSWORD=postgres psql --host=postgres --username=postgres < ddl.sql"
+docker-compose exec java /bin/bash -c "PGPASSWORD=postgres psql --host=postgres --username=postgres < ddl.sql"
 ```
 
 To execute the script run:
 
 ```bash
-docker-compose exec script /bin/bash -c "./script.sh scriptconfig.txt"
+docker-compose exec java /bin/bash -c "./script.sh scriptconfig.txt"
 ```
 
 To build the web app that is accessible under the url http://localhost:8080/testingplatform run:

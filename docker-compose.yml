@@ -9,15 +9,6 @@ services:
     working_dir: /code
     command: tail -f /dev/null
     tty: true
-  script:
-    build:
-      context: .
-      dockerfile: docker/dockerfile-script
-    volumes:
-       - ./:/code
-    working_dir: /code
-    command: tail -f /dev/null
-    tty: true
   tomcat:
     image: "tomcat:8-jre8"
     volumes:
