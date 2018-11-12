@@ -6,16 +6,17 @@ pipeline {
         }
     }
 
-    environment {
+    //environment {
         //TESTSERVER_TOMCAT_ENDPOINT=credentials('testserver-tomcat8-url')
         //TESTSERVER_TOMCAT_CREDENTIALS=credentials('testserver-tomcat8-credentials')
         //CONFIG = credentials('testserver-config-testingplatform.properties')
         //SCRIPT = credentials('testserver-script-testingplatform.properties')
-    }
+    //}
 
     stages { 
         stage('Configure') {
             steps {
+                sh 'echo "Test"'
                 //sh 'sed -i -e "s/<\\/settings>$//g\" ~/.m2/settings.xml'
                 //sh 'echo "    <servers>" >> ~/.m2/settings.xml'
                 //sh 'echo "        ${TESTSERVER_TOMCAT_CREDENTIALS}" >> ~/.m2/settings.xml'
@@ -28,6 +29,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'echo "Test"'
                 //sh 'mvn clean package'
             }
         }
