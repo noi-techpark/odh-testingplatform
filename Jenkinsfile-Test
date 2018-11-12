@@ -37,7 +37,7 @@ pipeline {
             steps {
                 //sh 'mvn tomcat:redeploy -Dmaven.tomcat.url=${TESTSERVER_TOMCAT_ENDPOINT} -Dmaven.tomcat.server=testServer'
                 sshagent(['jenkins-ssh-key']) {
-                    sh 'scp script.sh tomcat.testingmachine.eu:/var/script.sh'
+                    sh 'scp -o StrictHostKeyChecking=no script.sh tomcat.testingmachine.eu:/var/script.sh'
                 }
             }
         }
