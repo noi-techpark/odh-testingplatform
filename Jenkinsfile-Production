@@ -1,0 +1,31 @@
+pipeline {
+    agent {
+        dockerfile {
+            filename 'docker/dockerfile-java'
+            additionalBuildArgs '--build-arg JENKINS_USER_ID=`id -u jenkins` --build-arg JENKINS_GROUP_ID=`id -g jenkins`'
+        }
+    }
+
+    environment {
+        CONFIG = credentials('prod-config-testingplatform.properties')
+    }
+
+    stages{ 
+        stage('Configure') {
+            steps {
+                sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: 'target/testingplatform.war', onlyIfSuccessful: true
+            }
+	    }
+    }
+}
+

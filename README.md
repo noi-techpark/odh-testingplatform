@@ -55,8 +55,7 @@ into a postgres database. The second part is a j2ee application that show result
   
 ### Procedure
      
-  1. edit the web.xml file and change the jdbc_url context param to point to the right database. You can
-     add server/user/password as well
+  1. copy the `src/webapp/WEB-INF/config.properties.example` file to `src/webapp/WEB-INF/config.properties` and change the jdbc_url context param to point to the right database
      
   2. with maven create the war with the standard target: package
   
