@@ -28,13 +28,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo "Test"'
-                //sh 'mvn clean package'
+                sh 'mvn clean package'
             }
         }
         stage('Deploy') {
             steps {
-                //sh 'mvn tomcat:redeploy -Dmaven.tomcat.url=${TESTSERVER_TOMCAT_ENDPOINT} -Dmaven.tomcat.server=testServer'
+                sh 'mvn tomcat:redeploy -Dmaven.tomcat.url=${TESTSERVER_TOMCAT_ENDPOINT} -Dmaven.tomcat.server=testServer'
                 
                 sh 'rm -rf script'
                 sh 'mkdir -p script'
