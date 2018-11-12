@@ -41,7 +41,7 @@ pipeline {
                 sh 'cp script.sh script/'
                 sh 'cp scriptconfig.txt script/'
                 sh 'cp -r /var/soapui/SoapUI script/SoapUI'
-                sh 'tar -czf script'
+                sh 'tar -czf script.tar.gz script'
 
                 sshagent(['jenkins-ssh-key']) {
                     sh 'scp -o StrictHostKeyChecking=no script.tar.gz tomcat.testingmachine.eu:/var/testingplatform/script.tar.gz'
