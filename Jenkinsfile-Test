@@ -12,7 +12,7 @@ pipeline {
         CONFIG = credentials('testserver-config-testingplatform.properties')
     }
 
-    stages{ 
+    stages { 
         stage('Configure') {
             steps {
                 sh 'sed -i -e "s/<\\/settings>$//g\" ~/.m2/settings.xml'

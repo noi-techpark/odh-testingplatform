@@ -10,7 +10,7 @@ pipeline {
         CONFIG = credentials('prod-config-testingplatform.properties')
     }
 
-    stages{ 
+    stages {
         stage('Configure') {
             steps {
                 sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
