@@ -8,12 +8,14 @@ pipeline {
 
     environment {
         CONFIG = credentials('prod-config-testingplatform.properties')
+        SCRIPT = credentials('prod-script-testingplatform.properties')
     }
 
     stages {
         stage('Configure') {
             steps {
                 sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
+                sh 'cp "${SCRIPT}" config.txt'
             }
         }
         stage('Build') {

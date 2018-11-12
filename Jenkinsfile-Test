@@ -10,6 +10,7 @@ pipeline {
         TESTSERVER_TOMCAT_ENDPOINT=credentials('testserver-tomcat8-url')
         TESTSERVER_TOMCAT_CREDENTIALS=credentials('testserver-tomcat8-credentials')
         CONFIG = credentials('testserver-config-testingplatform.properties')
+        SCRIPT = credentials('testserver-script-testingplatform.properties')
     }
 
     stages { 
@@ -22,6 +23,7 @@ pipeline {
                 sh 'echo "</settings>" >> ~/.m2/settings.xml'
 
                 sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
+                sh 'cp "${SCRIPT}" config.txt'
             }
         }
         stage('Build') {
