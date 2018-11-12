@@ -40,7 +40,7 @@ pipeline {
                 sh 'mkdir -p script'
                 sh 'cp script.sh script/'
                 sh 'cp scriptconfig.txt script/'
-                sh 'cp /var/soapui/SoapUI script/SoapUI'
+                sh 'cp -r /var/soapui/SoapUI script/SoapUI'
                 sh 'tar -czf script'
 
                 sshagent(['jenkins-ssh-key']) {
