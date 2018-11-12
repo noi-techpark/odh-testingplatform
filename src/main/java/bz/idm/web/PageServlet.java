@@ -7,7 +7,9 @@
 
 package bz.idm.web;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
@@ -17,6 +19,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,7 +59,20 @@ public class PageServlet extends HttpServlet {
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		jdbc_url = config.getServletContext().getInitParameter("jdbc_url");
+		super.init(config);
+		try
+		{
+			Properties props = new Properties();
+			String file = getServletContext().getRealPath("/WEB-INF/config.properties");
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+			props.load(isr);
+			isr.close();
+			this.jdbc_url = props.getProperty("jdbc_url");
+		}
+		catch (IOException ioxxx)
+		{
+			throw new ServletException(ioxxx);
+		}
 	}
 
 	@Override
