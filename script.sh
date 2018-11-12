@@ -30,7 +30,7 @@ echo ">$SESSION_ID<"
 
 # exit 1
 
-curl -H 'Content-Type: application/json' -H "Authorization: bearer ${AUTHORIZATIONBEARER} " -X POST -d "{\"query\": \"query { user(organization: \\\"${USERLOGIN}\\\") {repositories (first:${REPOSITORYSIZE}) { nodes { url } } } }\"}" $APIURL | grep -o -E 'http[^"]+' | while read L
+curl -H 'Content-Type: application/json' -H "Authorization: bearer ${AUTHORIZATIONBEARER} " -X POST -d "{\"query\": \"query { organization(login: \\\"${USERLOGIN}\\\") {repositories (first:${REPOSITORYSIZE}) { nodes { url } } } }\"}" $APIURL | grep -o -E 'http[^"]+' | grep core |while read L
 do
     cd /tmp
     cd $TMPDIR
@@ -46,7 +46,7 @@ do
 
     basename=$(basename $L)
     cd $basename
-        for F in `find . -maxdepth 1 -name "*soapui*"`
+        for F in `find . -name "*soapui*"`
         do
             echo $F
             prefix="./";
