@@ -22,8 +22,8 @@ pipeline {
                 sh 'echo "    </servers>" >> ~/.m2/settings.xml'
                 sh 'echo "</settings>" >> ~/.m2/settings.xml'
 
-                sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
-                sh 'cp "${SCRIPT}" scriptconfig.txt'
+                sh 'cat "${CONFIG}" > src/main/webapp/WEB-INF/config.properties'
+                sh 'cat "${SCRIPT}" > scriptconfig.txt'
             }
         }
         stage('Build') {
