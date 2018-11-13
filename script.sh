@@ -35,7 +35,7 @@ do
     cd /tmp
     cd $TMPDIR
     echo $L
-    git clone --depth 1 $L
+    GIT_TERMINAL_PROMPT=0 git clone --depth 1 $L
     timestamp=$(date +"%F %H:%M")
     echo $timestamp
     REPOID=$(PGPASSWORD=$PGPASSWORD psql -h $PGHOST -U $PGUSER -d $PGDBNAME -c "INSERT INTO repositories VALUES (DEFAULT, '$L', '$timestamp', $SESSION_ID)")
