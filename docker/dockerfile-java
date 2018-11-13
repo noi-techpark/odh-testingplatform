@@ -7,7 +7,7 @@ RUN groupadd --gid $JENKINS_GROUP_ID jenkins && \
     useradd --uid $JENKINS_USER_ID --gid $JENKINS_GROUP_ID --create-home jenkins
 
 RUN apt-get update && \
-    apt-get install -y git curl zip openjdk-8-jdk maven postgresql-client
+    apt-get install -y git curl openjdk-8-jdk maven postgresql-client
 
 ADD https://s3.amazonaws.com/downloads.eviware/soapuios/5.4.0/SoapUI-5.4.0-linux-bin.tar.gz /var/soapui/SoapUI-5.4.0-linux-bin.tar.gz
 

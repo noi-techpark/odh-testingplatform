@@ -27,13 +27,13 @@ pipeline {
                 sh 'cp script.sh script/'
                 sh 'cp scriptconfig.txt script/'
                 sh 'cp -r /var/soapui/SoapUI script/SoapUI'
-                sh 'zip -r testingplatform-script.war script'
+                sh 'tar -czf script.tar.gz script'
             }
         }
         stage('Archive') {
             steps {
                 archiveArtifacts artifacts: 'target/testingplatform.war', onlyIfSuccessful: true
-                archiveArtifacts artifacts: 'testingplatform-script.war', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'script.tar.gz', onlyIfSuccessful: true
             }
 	    }
     }
