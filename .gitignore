@@ -3,3 +3,6 @@
 /.classpath
 /.project
 /.settings/
+
+/scriptconfig.txt
+/src/main/webapp/WEB-INF/config.properties
