@@ -1,0 +1,92 @@
+td.no-tests
+{
+	/* background-color: #ffbd7f; */
+}
+
+td.some-test-failed
+{
+	background-color: yellow;
+}
+
+td.details-control {
+    background: url('imgs/folder.png') no-repeat center center;
+    background-size: 70% 50%;
+    cursor: pointer;
+}
+
+td.details-control.empty {
+    background: unset;
+    cursor: unset;
+}
+tr.shown td.details-control {
+    background: url('imgs/folder-open.png') no-repeat center center;
+    background-size: 70% 50%;
+}
+
+td.status-UNKNOWN
+{
+	background-color: yellow;
+}
+
+td.status-FAILED
+{
+	background-color: red;
+	color: white;
+}
+
+td.status-OK
+{
+	background-color: green;
+	color: white;
+}
+
+td.status
+{
+	width: auto;
+	max-width: 100px
+}
+
+td.testname
+{
+	width: auto;
+	white-space: nowrap;
+	max-width: 400px
+}
+
+td.message
+{
+	width: 100%
+}
+
+table.dataTable tbody td {
+  vertical-align: middle;
+}
+
+#test_suite_tests_table th
+{
+	white-space: nowrap;
+	width: auto !important;
+	max-width: 200px !important;
+	
+}c
+
+th::before, th::after {
+  font: 100%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+  bottom: 0.5em !important;
+}
+
+.status-button-svg {
+  margin-right: 0.5rem;
+}
+
+.status-button-svg > circle {
+  fill: transparent;
+}
+
+.status-button-svg.ok > circle {
+  fill: green;
+}
+
+.status-button-svg.failed > circle {
+  fill: red;
+}
