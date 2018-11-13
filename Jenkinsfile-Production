@@ -14,18 +14,26 @@ pipeline {
     stages {
         stage('Configure') {
             steps {
-                sh 'cp "${CONFIG}" src/main/webapp/WEB-INF/config.properties'
-                sh 'cp "${SCRIPT}" scriptconfig.txt'
+                sh 'cat "${CONFIG}" > src/main/webapp/WEB-INF/config.properties'
+                sh 'cat "${SCRIPT}" > scriptconfig.txt'
             }
         }
         stage('Build') {
             steps {
                 sh 'mvn clean package'
+
+                sh 'rm -rf script'
+                sh 'mkdir -p script'
+                sh 'cp script.sh script/'
+                sh 'cp scriptconfig.txt script/'
+                sh 'cp -r /var/soapui/SoapUI script/SoapUI'
+                sh 'tar -czf script.tar.gz script'
             }
         }
         stage('Archive') {
             steps {
                 archiveArtifacts artifacts: 'target/testingplatform.war', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'script.tar.gz', onlyIfSuccessful: true
             }
 	    }
     }
