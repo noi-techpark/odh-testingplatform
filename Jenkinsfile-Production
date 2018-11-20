@@ -28,7 +28,7 @@ pipeline {
                 sh 'cp scriptconfig.txt script/'
                 sh 'cp -r /var/soapui/SoapUI script/SoapUI'
                 sh 'zip -r testingplatform-script.zip script'
-                sh 'mv testingplatform-script.zip testingplatform-script.war
+                sh 'mv testingplatform-script.zip testingplatform-script.war'
             }
         }
         stage('Archive') {
