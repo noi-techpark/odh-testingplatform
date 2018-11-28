@@ -56,7 +56,7 @@ do
             ./testrunner.sh -a -M -I /tmp/$TMPDIR/$basename/$F
             value=`cat soapui.log`
             xmltxt=$(cat test_case_run_log_report.xml)
-            PGPASSWORD=$PGPASSWORD psql -h $PGHOST -U $PGUSER -d $PGDBNAME -c "INSERT INTO log VALUES ('$value', '$xmltxt', $((REPOID)), DEFAULT )"
+            PGPASSWORD=$PGPASSWORD psql -h $PGHOST -U $PGUSER -d $PGDBNAME -c "INSERT INTO log VALUES ('$value', '$xmltxt', $((REPOID)), DEFAULT, '$F' )"
         done
 done
 
