@@ -1,0 +1,34 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: idm-suedtirol/bdp-core
+Upstream-Contact: Open Data Hub Team <info@opendatahub.bz.it>
+Source: https://github.com/idm-suedtirol/bdp-core
+
+Files: *.properties *scriptconfig.txt *.md *.xml *.sql *.sh *.java *.js *.html *.css
+Copyright: 2018 IDM Südtirol - Alto Adige (info@idm-suedtirol.com)
+License: AGPL-3.0-or-later
+
+Files: *.md *.txt
+Copyright: 2018 IDM Südtirol - Alto Adige (info@idm-suedtirol.com)
+License: CC0-1.0
+
+Files: *.svg
+Copyright: 2014, Austin Andrews (http://materialdesignicons.com/),
+Copyright: 2014, Google (http://www.google.com/design/)
+License: OFL-1.1 and Apache-2.0
+
+Files: src/main/webapp/lib/bootstrap/*
+Copyright: 2011-2018 Twitter, Inc.
+Copyright: 2011-2018 The Bootstrap Authors
+License: MIT
+
+Files: src/main/webapp/lib/jquery/*
+Copyright: 2018 The jQuery Foundation
+License: MIT
+
+Files: src/main/webapp/lib/datatables/*
+Copyright: 2008-2018, SpryMedia Ltd.
+License: MIT
+
+Files: src/main/webapp/lib/c3/*
+Copyright: 2013 Masayuki Tanaka
+License: MIT
