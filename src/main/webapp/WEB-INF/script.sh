@@ -1,3 +1,5 @@
+echo "script.sh started!"
+
 if [ $# -ne 1 ]
    then
       echo 'Usage: ./script.sh <configfile>'
@@ -10,6 +12,8 @@ fi;
 
 set -x
 set -e
+
+CURR_DIR=$(pwd)
 
 cd /tmp
 
@@ -52,7 +56,7 @@ do
             prefix="./";
             F=${F#$prefix}; 
             TMPDIR2=/tmp/$TMPDIR/$basename/$F
-            cd $TESTRUNNER_DIR
+            cd $CURR_DIR/SoapUI-5.4.0/bin
             ./testrunner.sh -a -M -I /tmp/$TMPDIR/$basename/$F
             value=`cat soapui.log`
             xmltxt=$(cat test_case_run_log_report.xml)
