@@ -1,0 +1,41 @@
+Status: OK
+Time Taken: 22
+Size: 111
+Timestamp: Thu Dec 06 17:07:22 CET 2018
+TestStep: /rest/refresh-token
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://ipchannels.integreen-life.bz.it
+Method: GET
+StatusCode: 401
+URL: http://ipchannels.integreen-life.bz.it/bluetooth/rest/refresh-token?user=&pw=
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [ipchannels.integreen-life.bz.it]
+Accept-Encoding: [gzip,deflate]
+
+GET http://ipchannels.integreen-life.bz.it/bluetooth/rest/refresh-token?user=&pw= HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: ipchannels.integreen-life.bz.it
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+Transfer-Encoding: [chunked]
+Server: [Apache-Coyote/1.1]
+Access-Control-Allow-Origin: [*]
+Access-Control-Allow-Methods: [GET]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 401 Unauthorized]
+Access-Control-Max-Age: [3600]
+Date: [Thu, 06 Dec 2018 16:07:22 GMT]
+Access-Control-Allow-Headers: [x-requested-with]
+Content-Type: [application/json;charset=UTF-8]
+
+{"status":401,"name":"Unauthorized","description":"ClientResponse has erroneous status code: 401 Unauthorized"}

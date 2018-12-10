@@ -14,6 +14,17 @@
 		<servlet-name>chart</servlet-name>
 		<servlet-class>bz.idm.web.ChartServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>CronTask</servlet-name>
+		<servlet-class>bz.idm.web.task.CronTask</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CronTask</servlet-name>
+		<url-pattern>/cron</url-pattern>
+	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>page</servlet-name>

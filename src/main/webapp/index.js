@@ -26,7 +26,7 @@ $(document).ready( function () {
                     
                   dataSetTestcases[dataSetTestcases.length] = [
                      dataSetTests,
-                     testCase.attributes['testCase'].value,
+                     [testCase.attributes['testCase'].value, testCases.attributes['testfile_path']? testCases.attributes['testfile_path'].value: ""],
                      testCase.attributes['status'].value,
                      testCase.attributes['timeStamp'].value,
                      testCase.children.length,
@@ -85,7 +85,13 @@ $(document).ready( function () {
                   }
                },
                { title: "#" },
-               { title: "repository name" },
+               {
+            	   title: "repository name",
+                   createdCell: function (td, cellData, rowData, row, col) {
+                	   $(td).empty();
+                       $(td).append($('<a href="' + cellData + '">' + cellData + '</a>'));
+                    }
+               },
                { title: "timestamp" },
                {
                   title: "tot",
@@ -137,7 +143,13 @@ $(document).ready( function () {
                            }
                         }
                      },
-                     { title: "test suite name" },
+                     {
+                    	 title: "test suite name",
+                         createdCell: function (td, cellData, rowData, row, col) {
+                      	   $(td).empty();
+                             $(td).append($('<a href="' + dataSet[testSuiteIndex][2] + '/blob/master/' + cellData[1] + '">' + cellData[0] + '</a>'));
+                          }
+                     },
                      { title: "timestamp" },
                      { title: "time" },
                      { title: "# of tests" },

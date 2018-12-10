@@ -21,9 +21,10 @@ select   xmlelement(name Repository, xmlattributes( id as id,
 															  from test
 													) as ok),
 			       (
-			          select xmlelement(name root, xmlagg(result_xml))
+			          select xmlelement(name root, xmlattributes(testfile_path as testfile_path), xmlagg(result_xml))
 			            from log
 			           where repo_id = repositories.id
+			           group by testfile_path
 			       )) as x
   from repositories
  where (name, timestamp) in (
