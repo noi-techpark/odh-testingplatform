@@ -1,9 +1,9 @@
 APIURL=https://api.github.com/graphql
-TESTRUNNER_DIR='/var/soapui/SoapUI/bin/'
-AUTHORIZATIONBEARER=
+TESTRUNNER_DIR='/.../SmartBear/SoapUI-5.4.0/bin/'
+AUTHORIZATIONBEARER=aaa
 USERLOGIN=gituser
 REPOSITORYSIZE=100
-PGHOST=postgres
+PGHOST=localhost
 PGDBNAME=postgres
 PGUSER=postgres
-PGPASSWORD=postgres
+PGPASSWORD=
