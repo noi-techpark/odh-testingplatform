@@ -1,0 +1,43 @@
+Status: OK
+Time Taken: 17
+Size: 1641
+Timestamp: Thu Dec 06 17:07:22 CET 2018
+TestStep: /rest/get-station-details
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://ipchannels.integreen-life.bz.it
+Method: GET
+StatusCode: 200
+URL: http://ipchannels.integreen-life.bz.it/bluetooth/rest/get-station-details
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [ipchannels.integreen-life.bz.it]
+Accept-Encoding: [gzip,deflate]
+
+GET http://ipchannels.integreen-life.bz.it/bluetooth/rest/get-station-details HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: ipchannels.integreen-life.bz.it
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+Server: [Apache-Coyote/1.1]
+Access-Control-Allow-Origin: [*]
+Access-Control-Allow-Methods: [GET]
+Connection: [keep-alive]
+Content-Encoding: [gzip]
+Vary: [Accept-Encoding]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [440]
+Access-Control-Max-Age: [3600]
+Date: [Thu, 06 Dec 2018 16:07:22 GMT]
+Access-Control-Allow-Headers: [x-requested-with]
+Content-Type: [application/json;charset=UTF-8]
+
+[{"_t":"it.bz.idm.bdp.dto.StationDto","id":"galvani","name":"via Galvani","latitude":46.47408563661909,"longitude":11.33186460255768,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"cfirmiano","name":"Castel Firmiano","latitude":46.493382,"longitude":11.310146,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"proma","name":"Ponte Roma","latitude":46.490294216837974,"longitude":11.342115371068838,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"caugusta","name":"caugusta","latitude":46.48249106428508,"longitude":11.342300401922715,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"resiadruso","name":"resiadruso","latitude":46.49404172052414,"longitude":11.314340977850515,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"siemens","name":"Tis","latitude":46.482323,"longitude":11.329235,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"aeinstein","name":"Agip Einstein","latitude":46.47118129886608,"longitude":11.31684489511241,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"meinstein","name":"meinstein","latitude":46.46829458043375,"longitude":11.328434351357878,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"},{"_t":"it.bz.idm.bdp.dto.StationDto","id":"druso-poste","name":"Viale Druso poste","latitude":46.495026254627234,"longitude":11.340048132717214,"crs":"EPSG:4326","municipality":"Bolzano - Bozen"}]

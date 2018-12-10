@@ -3,19 +3,19 @@
 <head>
    <meta charset="UTF-8">
    
-   <link rel="stylesheet" type="text/css" href="c3/c3.css">
+   <link rel="stylesheet" type="text/css" href="lib/c3/c3.css">
    
-   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="lib/datatables/dataTables.bootstrap4.min.css">
    <link rel="stylesheet" type="text/css" href="index.css">
   
-   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="lib/jquery/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="lib/datatables/jquery.dataTables.js"></script>
+   <script type="text/javascript" charset="utf8" src="lib/datatables/dataTables.bootstrap4.min.js"></script>
    <script type="text/javascript" charset="utf8" src="index.js"></script>
    
    <script src="https://d3js.org/d3.v5.min.js"></script>
-   <script type="text/javascript" charset="utf8" src="c3/c3.js"></script>
+   <script type="text/javascript" charset="utf8" src="lib/c3/c3.js"></script>
    
    <style>
    .c3-line {
@@ -32,7 +32,7 @@
             <circle cx="10" cy="10" r="10" stroke-width="0" stroke="transparent"></circle>
          </svg>
          <span>
-            <span id="test-failed">0</span> failed sul totale di <span id="test-tot">0</span>
+            <span id="test-failed">0</span> of <span id="test-tot">0</span> tests failed
          </span>
       </h5>
       <div id="chart" style="margin-top:20px"></div>
