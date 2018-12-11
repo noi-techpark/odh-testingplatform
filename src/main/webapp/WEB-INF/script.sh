@@ -10,7 +10,7 @@ fi;
 
 . $1
 
-set -x
+# set -x
 set -e
 
 CURR_DIR=$(pwd)
@@ -57,7 +57,7 @@ do
             F=${F#$prefix}; 
             TMPDIR2=/tmp/$TMPDIR/$basename/$F
             cd $CURR_DIR/SoapUI-5.4.0/bin
-            ./testrunner.sh -a -M -I /tmp/$TMPDIR/$basename/$F
+            /bin/sh ./testrunner.sh -a -M -I /tmp/$TMPDIR/$basename/$F
             value=`cat soapui.log`
             xmltxt=$(cat test_case_run_log_report.xml)
             PGPASSWORD=$PGPASSWORD psql -h $PGHOST -U $PGUSER -d $PGDBNAME -c "INSERT INTO log VALUES ('$value', '$xmltxt', $((REPOID)), DEFAULT, '$F' )"
