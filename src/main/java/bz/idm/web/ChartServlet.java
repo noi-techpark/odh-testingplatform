@@ -85,7 +85,7 @@ public class ChartServlet extends HttpServlet {
 			String sql = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("chart.sql").toURI())),
 					StandardCharsets.UTF_8);
 			ResultSet rs = conn.createStatement().executeQuery(sql);
-			while (rs.next()) {
+			if (rs.next()) {
 				String json = rs.getString(1);
 				resp.getWriter().write(json);
 			}

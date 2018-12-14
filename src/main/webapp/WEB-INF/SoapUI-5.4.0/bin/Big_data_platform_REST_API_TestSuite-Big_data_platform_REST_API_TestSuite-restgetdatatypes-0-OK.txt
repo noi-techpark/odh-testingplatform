@@ -1,0 +1,43 @@
+Status: OK
+Time Taken: 31
+Size: 346
+Timestamp: Thu Dec 06 17:07:22 CET 2018
+TestStep: /rest/get-data-types
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://ipchannels.integreen-life.bz.it
+Method: GET
+StatusCode: 200
+URL: http://ipchannels.integreen-life.bz.it/bluetooth/rest/get-data-types
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [ipchannels.integreen-life.bz.it]
+Accept-Encoding: [gzip,deflate]
+
+GET http://ipchannels.integreen-life.bz.it/bluetooth/rest/get-data-types HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: ipchannels.integreen-life.bz.it
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+Server: [Apache-Coyote/1.1]
+Access-Control-Allow-Origin: [*]
+Access-Control-Allow-Methods: [GET]
+Connection: [keep-alive]
+Content-Encoding: [gzip]
+Vary: [Accept-Encoding]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [114]
+Access-Control-Max-Age: [3600]
+Date: [Thu, 06 Dec 2018 16:07:22 GMT]
+Access-Control-Allow-Headers: [x-requested-with]
+Content-Type: [application/json;charset=UTF-8]
+
+[["Bluetooth Count record","","Count record ","900"],["Bluetooth Count record","","Count record ","1800"],["Bluetooth Count record","","Count record ","21600"],["heavy vehicle","","","900"],["heavy vehicle","","","1800"],["heavy vehicle","","","21600"],["light vehicle","","","900"],["light vehicle","","","1800"],["light vehicle","","","21600"]]

@@ -9,8 +9,7 @@ td.some-test-failed
 }
 
 td.details-control {
-    background: url('imgs/folder.png') no-repeat center center;
-    background-size: 70% 50%;
+    background: url('imgs/folder.svg') no-repeat center center;
     cursor: pointer;
 }
 
@@ -19,8 +18,7 @@ td.details-control.empty {
     cursor: unset;
 }
 tr.shown td.details-control {
-    background: url('imgs/folder-open.png') no-repeat center center;
-    background-size: 70% 50%;
+    background: url('imgs/folder-open.svg') no-repeat center center;
 }
 
 td.status-UNKNOWN
