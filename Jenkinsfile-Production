@@ -27,6 +27,6 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: 'target/testingplatform.war', onlyIfSuccessful: true
             }
-	    }
+        }
     }
 }
