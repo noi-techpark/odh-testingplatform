@@ -189,3 +189,10 @@ ALTER TABLE ONLY public.repositories
 -- PostgreSQL database dump complete
 --
 
+-- 
+-- Set Permissions
+--
+GRANT ALL ON SCHEMA public TO odhtestingplatform;
+GRANT ALL ON ALL TABLES IN SCHEMA public TO odhtestingplatform;
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO odhtestingplatform;
+
