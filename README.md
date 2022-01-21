@@ -2,7 +2,7 @@
 
 OpenDataHub testing platform git repository
 
-[![ci odh-testingplatform](https://github.com/noi-techpark/odh-testingplatform/actions/workflows/ci.yml/badge.svg)](https://github.com/noi-techpark/odh-testingplatform/actions/workflows/ci.yml)
+[![CI](https://github.com/noi-techpark/odh-testingplatform/actions/workflows/ci.yml/badge.svg)](https://github.com/noi-techpark/odh-testingplatform/actions/workflows/ci.yml)
 
 ## Installing
 
